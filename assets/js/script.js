@@ -60,3 +60,18 @@ $(document).ready(function () {
     hourDivs.forEach(div => {
       let divHour = Number(div.id.slice(5,div.id.length));
       console.log(divHour);
+
+      if(divHour < currentHour){
+        div.classList.add('past');
+        div.classList.remove('present', 'future');
+      } else if(divHour == currentHour) {
+        div.classList.add('present');
+        div.classList.remove('past', 'future');
+      } else {
+        div.classList.add('future');
+        div.classList.remove('present', 'past');
+      }
+    });
+  }
+
+
