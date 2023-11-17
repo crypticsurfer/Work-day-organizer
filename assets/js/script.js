@@ -38,3 +38,16 @@ $(document).ready(function () {
     button.addEventListener("click", saveEvent)
   });
 
+  function populateFromStorage(){
+    hourDivs.forEach(div => {
+      if(localStorage.getItem(div.id.toString()) !== null){
+        div.querySelector("textarea").value = localStorage.getItem(div.id.toString());
+      }
+    });
+  }
+
+  function showCurrentTime() {
+    const currentTimeElement = document.getElementById('current-time');
+    const currentTime = dayjs().format('HH:mm:ss'); // Formats time as needed
+    currentTimeElement.textContent = `Current Time: ${currentTime}`;
+  }
