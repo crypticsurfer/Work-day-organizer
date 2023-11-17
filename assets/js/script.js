@@ -16,13 +16,12 @@
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
-let today = day.js();
-let currentHour;
-let eventHoursArray = [
-  "placeholder", "placeholder", "placeholder","placeholder", "placeholder", "placeholder", "placeholder", "placeholder",
-  "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm"
-];
-let storageArray = [
-  "placeholder", "placeholder", "placeholder","placeholder", "placeholder", "placeholder", "placeholder", "placeholder",
-  "", "", "", "", "", "", "", ""
-];
+$(document).ready(function () {
+  var SavedNotif = $("#notif");
+  SavedNotif.hide();
+  showCurrentTime();
+});
+  $(function(){
+    setInterval(updateTime, 1000)
+  });
+
