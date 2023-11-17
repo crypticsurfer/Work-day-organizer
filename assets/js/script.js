@@ -25,3 +25,16 @@ $(document).ready(function () {
     setInterval(updateTime, 1000)
   });
 
+  function saveEvent(event) {
+    let hourDiv = event.currentTarget.parentElement;
+    console.log(hourDiv);
+    appointment = hourDiv.querySelector("textarea").value.toString();
+    localStorage.setItem(hourDiv.id.toString(), appointment);
+    SavedNotif.show();
+    console.log(localStorage.getItem(hourDiv.id.toString()));
+  }
+  var SaveBtn = $(".saveBtn").toArray();
+  SaveBtn.forEach(button => {
+    button.addEventListener("click", saveEvent)
+  });
+
