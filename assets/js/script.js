@@ -51,3 +51,12 @@ $(document).ready(function () {
     const currentTime = dayjs().format('HH:mm:ss'); // Formats time as needed
     currentTimeElement.textContent = `Current Time: ${currentTime}`;
   }
+
+  function updateTime() {
+    showCurrentTime();
+    let currentHour = dayjs().format('H');
+    console.log(currentHour);
+    var hourDivs = $(".time-block").toArray();
+    hourDivs.forEach(div => {
+      let divHour = Number(div.id.slice(5,div.id.length));
+      console.log(divHour);
