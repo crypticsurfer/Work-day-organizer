@@ -20,11 +20,12 @@ $(document).ready(function () {
   var SavedNotif = $("#notif");
   SavedNotif.hide();
   showCurrentTime();
+  
 });
   $(function(){
-    setInterval(updateTime, 1000)
+    setInterval(updateTime, 1000) //updating time every second
   });
-
+//creating the event to save the content in the text area
   function saveEvent(event) {
     let hourDiv = event.currentTarget.parentElement;
     console.log(hourDiv);
@@ -37,7 +38,7 @@ $(document).ready(function () {
   SaveBtn.forEach(button => {
     button.addEventListener("click", saveEvent)
   });
-
+//grabbing the content from local storage 
   function populateFromStorage(){
     hourDivs.forEach(div => {
       if(localStorage.getItem(div.id.toString()) !== null){
@@ -45,13 +46,13 @@ $(document).ready(function () {
       }
     });
   }
-
+//saving the current time and having it update in military time
   function showCurrentTime() {
     const currentTimeElement = document.getElementById('current-time');
     const currentTime = dayjs().format('HH:mm:ss'); // Formats time as needed
     currentTimeElement.textContent = `Current Time: ${currentTime}`;
   }
-
+//updating the current time and having the color change based on past present and future
   function updateTime() {
     showCurrentTime();
     let currentHour = dayjs().format('H');
