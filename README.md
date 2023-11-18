@@ -11,5 +11,8 @@ NA
 The result can be viewed [here.](https://crypticsurfer.github.io/Work-day-organizer/)
 ![Work Day Organizer](https://github.com/crypticsurfer/Work-day-organizer/assets/130003418/edcd90ef-057c-469e-80a8-3ea69bbfce09)
 
+## Credits
+Had help from Cardon on some of the javascript functionality as well as CJ helping me fix the problem of the time not showing up and functioning correctly
+
 ## Liscense
 MIT
