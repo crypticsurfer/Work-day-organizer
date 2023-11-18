@@ -8,4 +8,8 @@ This is a simple calendar that updates each time block to display if its in the 
 NA
 
 ## Usage 
-The result can be viewed [here.]
+The result can be viewed [here.](https://crypticsurfer.github.io/Work-day-organizer/)
+![Work Day Organizer](https://github.com/crypticsurfer/Work-day-organizer/assets/130003418/edcd90ef-057c-469e-80a8-3ea69bbfce09)
+
+## Liscense
+MIT
